@@ -1,0 +1,23 @@
+---
+title: "LeafletProject"
+author: "Lars Bungum"
+date: "17 11 2016"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## Two nice churches in Trondheim
+```{r, eval=TRUE} 
+library(leaflet)
+my_map <- leaflet() %>%
+  addTiles() %>%
+  addCircleMarkers(lat=63.42692779, lng=10.39691667, popup="Nidaros Cathedral (11th Century)") %>%
+  addCircleMarkers(lat=63.43017779, lng=10.39777778, popup="Notre Dame de Trondheim (18th Century)") 
+my_map
+```
+
+
