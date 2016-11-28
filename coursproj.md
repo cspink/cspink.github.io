@@ -3,35 +3,43 @@ title: "Developing Data Products"
 author: "Lars Bungum"
 date: "28 11 2016"
 output: html_document
+job         : 
+framework   : showoff        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : [mathjax, quiz, bootstrap]            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
 ---
 
 
 
-## R Markdown
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+## Developing Data Products Course Project
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+### Estimating the Perplexity of a Probabilistic Model
 
 
-```r
-summary(cars)
-```
+---
 
-```
-##      speed           dist       
-##  Min.   : 4.0   Min.   :  2.00  
-##  1st Qu.:12.0   1st Qu.: 26.00  
-##  Median :15.0   Median : 36.00  
-##  Mean   :15.4   Mean   : 42.98  
-##  3rd Qu.:19.0   3rd Qu.: 56.00  
-##  Max.   :25.0   Max.   :120.00
-```
+## Perplexity Background
 
-## Including Plots
+Perplexity is defined as 2 raised to the Cross-Entropy:
 
-You can also embed plots, for example:
+2^(-logq(x)*q(x))
 
-![plot of chunk pressure](assets/fig/pressure-1.png)
+--- 
+## Perplexity Maximization
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+The perplexity is maximized when the events are equiprobable.  This can be shown by means of a mathematical proof.  This application lets the user simulate a number of events (modeled by random numbers), whose frequency determine their probability.  The user can choose an interval from which random numbers will not be selected (say from 40 to 60 in a 1-100 range) to make the distribution of events less equal, while still retaining the property of a probability distribution, namely that the probability of all outcomes sum to one.
+
+
+---
+
+This gap is controllable by the user:
+
+![plot of chunk unnamed-chunk-1](figure/unnamed-chunk-1-1.png)
+
+---
+Application user interface.  The perplexity of the model is updated as the sliders are moved.
+
+![height](appui.png)
