@@ -71,37 +71,28 @@
   <div class="slide" data-transition="">
   <div class="content " ref="slide-1">
     <h2>Developing Data Products Course Project</h2>
-    <h2>Estimating the Perplexity of a Probabilistic Model</h2>
+    <h3>Estimating the Perplexity of a Probabilistic Model</h3>
 
   </div>
 </div>
 <div class="slide" data-transition="">
   <div class="content " ref="slide-2">
-    <h2>Perplexity</h2>
-    <p>Perplexity is defined as 2 raised to the Cross-Entropy:</p>
-
-<pre><code class="r">2^(-logq(x)*q(x))
-</code></pre>
-
-<pre><code>## Error in eval(expr, envir, enclos): could not find function &quot;logq&quot;
-</code></pre>
+    <h2>Perplexity Background</h2>
+    <p>Perplexity is defined as 2 raised to the Cross-Entropy:2<sup>-logq(x</sup>*q(x))</p>
 
   </div>
 </div>
 <div class="slide" data-transition="">
-  <div class="content " ref="dillinger">
-    <h2>Including Plots</h2>
-    <p>You can also embed plots, for example:</p>
-
-<p><img src="figure/pressure-1.png" alt="plot of chunk pressure"></p>
+  <div class="content " ref="slide-3">
+    <h2>Perplexity Maximization</h2>
+    <p>The perplexity is maximized when the events are equiprobable.  This can be shown by means of a mathematical proof.  This application lets the user simulate a number of events (modeled by random numbers), whose frequency determine their probability.  The user can choose an interval from which random numbers will not be selected (say from 40 to 60 in a 1-100 range) to make the distribution of events less equal, while still retaining the property of a probability distribution, namely that the probability of all outcomes sum to one.</p>
 
   </div>
 </div>
 <div class="slide" data-transition="">
   <div class="content " ref="slide-4">
     
-    <p>Note that the <code>echo = FALSE</code> parameter was added to the code chunk to prevent printing of the R code that generated the plot.</p>
-
+    
   </div>
 </div>
 </div>
